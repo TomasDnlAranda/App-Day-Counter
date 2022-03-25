@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>App - Counter Days</title>
+		<link rel="stylesheet" href="./src/scss/style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Lato&family=Open+Sans:wght@300;400&family=Poppins:wght@200;400;600;800&family=Roboto:wght@100;300&family=The+Nautigal&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div id="app">
+			<div class="container">
+				<form id="form">
+					<input type="text" name="event" placeholder="ingrese el evento..." />
+					<input type="date" name="date" placeholder="ingrese el evento..." />
+					<button type="submit">Añadir evento</button>
+				</form>
+			</div>
+		</div>
+
+		<template id="templateEvents"
+			><div class="container-template">
+				<div class="container-events">
+					<div class="container-days-events">
+						<div class="column">
+							<span class="number">20</span>
+							<span class="days">dias</span>
+						</div>
+						<p class="event">cumpleaños de mama</p>
+					</div>
+					<div class="container-date-delate">
+						<p class="date">2022-03-03</p>
+						<button class="delete">Eliminar</button>
+					</div>
+				</div>
+			</div></template
+		>
+	</body>
+</html>

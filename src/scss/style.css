@@ -1,0 +1,206 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #4158d0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#4158d0), color-stop(46%, #c850c0), to(#ffcc70));
+  background-image: linear-gradient(90deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+  height: 100%;
+}
+
+body #app {
+  margin: 2rem 0;
+}
+
+body #app .container #form {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #838383;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+body #app .container #form input[type='text'] {
+  padding: 0.25rem;
+  margin: 0.5rem 0 0;
+}
+
+body #app .container #form input[type='date'] {
+  margin: 0.5rem 0 0;
+}
+
+body #app .container #form button {
+  margin: 0.5rem 0 0;
+  background: #0d4997;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+  padding: 0.5rem 5rem;
+  cursor: pointer;
+}
+
+body .container-template {
+  padding: 0.75rem;
+  border: 1px solid #838383;
+  background: white;
+  margin: 0.5rem auto 0.5rem;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+body .container-template .container-events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #838383;
+}
+
+body .container-template .container-events .container-days-events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container-template .container-events .container-days-events .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #00374d;
+  padding: 0.3rem 1rem;
+  margin-top: 0.5rem;
+}
+
+body .container-template .container-events .container-days-events .column .number {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+body .container-template .container-events .container-days-events .column .days {
+  font-size: 0.75rem;
+  margin-left: 0.6rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+body .container-template .container-events .container-days-events .event {
+  margin: 0 0 0 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+body .container-template .container-events .container-date-delate {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .container-template .container-events .container-date-delate .delete {
+  border: none;
+  background: #c00000;
+  border-radius: 0.5rem;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  cursor: pointer;
+}
+
+body .container-template .container-events .container-date-delate .delete:hover {
+  background: #e90000;
+}
+
+body .container-template .container-events .container-date-delate .date {
+  font-size: 1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  body #app .container #form {
+    padding: 1.5rem;
+  }
+  body #app .container #form input[type='text'] {
+    padding: 0.5rem;
+  }
+  body #app .container #form input[type='date'] {
+    padding: 0.25rem;
+  }
+  body #app .container #form button {
+    margin: 0.5rem 0 0;
+    background: #0d4997;
+    border: none;
+    border-radius: 0.25rem;
+    color: #fff;
+    padding: 1rem 7rem;
+    -webkit-transition: background 0.5s;
+    transition: background 0.5s;
+    cursor: pointer;
+  }
+  body #app .container #form button:hover {
+    background: #02316e;
+  }
+  body .container-template .container-events {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 1rem;
+  }
+  body .container-template .container-events .container-days-events .column .number {
+    font-size: 2.75rem;
+  }
+  body .container-template .container-events .container-days-events .column .days {
+    font-size: 1rem;
+    margin-left: 0.65rem;
+    color: #fff;
+    font-weight: bold;
+  }
+  body .container-template .container-events .container-days-events .event {
+    margin: 0 1.5rem 0 1.5rem;
+    font-size: 1.25rem;
+  }
+  body .container-template .container-events .container-date-delate .date {
+    font-size: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+  }
+}
+/*# sourceMappingURL=style.css.map */

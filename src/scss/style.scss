@@ -1,0 +1,164 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #4158d0;
+	background-image: linear-gradient(90deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+	height: 100%;
+	#app {
+		margin: 2rem 0;
+		.container {
+			#form {
+				margin: 0 auto;
+				display: flex;
+				flex-direction: column;
+				padding: 1rem;
+				background: #fff;
+				border: 1px solid rgb(131, 131, 131);
+				width: max-content;
+				input[type='text'] {
+					padding: 0.25rem;
+					margin: 0.5rem 0 0;
+				}
+				input[type='date'] {
+					margin: 0.5rem 0 0;
+				}
+				button {
+					margin: 0.5rem 0 0;
+					background: rgb(13, 73, 151);
+					border: none;
+					border-radius: 0.25rem;
+					color: #fff;
+					padding: 0.5rem 5rem;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.container-template {
+		padding: 0.75rem;
+		border: 1px solid rgb(131, 131, 131);
+		background: white;
+		margin: 0.5rem auto 0.5rem;
+		max-width: max-content;
+		.container-events {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			padding: 1rem;
+			border: 1px solid rgb(131, 131, 131);
+			.container-days-events {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.column {
+					display: flex;
+					flex-direction: column;
+					background: rgb(0, 55, 77);
+					padding: 0.3rem 1rem;
+					margin-top: 0.5rem;
+					.number {
+						font-size: 2.25rem;
+						font-weight: bold;
+						color: #fff;
+					}
+					.days {
+						font-size: 0.75rem;
+						margin-left: 0.6rem;
+						color: #fff;
+						font-weight: bold;
+					}
+				}
+				.event {
+					margin: 0 0 0 2rem;
+					font-size: 1rem;
+					font-weight: bold;
+				}
+			}
+			.container-date-delate {
+				align-items: center;
+				display: flex;
+				.delete {
+					border: none;
+					background: rgb(192, 0, 0);
+					border-radius: 0.5rem;
+					color: #fff;
+					padding: 0.25rem 0.75rem;
+					height: max-content;
+					transition: background 0.5s;
+					cursor: pointer;
+					&:hover {
+						background: rgb(233, 0, 0);
+					}
+				}
+				.date {
+					font-size: 1rem;
+					width: max-content;
+					padding: 0.5rem 1rem;
+					margin-right: 1rem;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	body {
+		#app {
+			.container {
+				#form {
+					padding: 1.5rem;
+					input[type='text'] {
+						padding: 0.5rem;
+					}
+					input[type='date'] {
+						padding: 0.25rem;
+					}
+					button {
+						margin: 0.5rem 0 0;
+						background: rgb(13, 73, 151);
+						border: none;
+						border-radius: 0.25rem;
+						color: #fff;
+						padding: 1rem 7rem;
+						transition: background 0.5s;
+						cursor: pointer;
+						&:hover {
+							background: rgb(2, 49, 110);
+						}
+					}
+				}
+			}
+		}
+		.container-template {
+			.container-events {
+				flex-direction: row;
+				padding: 1rem;
+				.container-days-events {
+					.column {
+						.number {
+							font-size: 2.75rem;
+						}
+						.days {
+							font-size: 1rem;
+							margin-left: 0.65rem;
+							color: #fff;
+							font-weight: bold;
+						}
+					}
+					.event {
+						margin: 0 1.5rem 0 1.5rem;
+						font-size: 1.25rem;
+					}
+				}
+				.container-date-delate {
+					.date {
+						font-size: 1rem;
+						margin-right: 1rem;
+						margin-left: 1rem;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+}
