@@ -6,26 +6,6 @@ const alertDate = document.querySelector('.container-alert-date');
 
 let events = [];
 
-form.addEventListener('submit', (e) => {
-	alertEvent.style.display = 'none';
-	alertDate.style.display = 'none';
-
-	e.preventDefault();
-
-	const data = new FormData(form);
-	const [eventText, date] = [...data.values()];
-
-	if (!eventText.trim()) return alertValidation(alertEvent);
-
-	if (!date.trim()) return alertValidation(alertDate);
-
-	if (dateDiff(date) < 0) return alertValidation(alertDate);
-
-	handleEvent(eventText, date);
-
-	form.reset();
-});
-
 const handleEvent = (text, date) => {
 	const event = {
 		id: (Math.random() * 100).toString(36).slice(3),
@@ -34,6 +14,7 @@ const handleEvent = (text, date) => {
 	};
 
 	events.push(event);
+	console.log(events);
 
 	renderEvents();
 };
@@ -65,6 +46,26 @@ const renderEvents = () => {
 };
 
 const alertValidation = (alert) => (alert.style.display = 'block');
+
+form.addEventListener('submit', (e) => {
+	alertEvent.style.display = 'none';
+	alertDate.style.display = 'none';
+
+	e.preventDefault();
+
+	const data = new FormData(form);
+	const [eventText, date] = [...data.values()];
+
+	if (!eventText.trim()) return alertValidation(alertEvent);
+
+	if (!date.trim()) return alertValidation(alertDate);
+
+	if (dateDiff(date) < 0) return alertValidation(alertDate);
+
+	handleEvent(eventText, date);
+
+	form.reset();
+});
 
 document.addEventListener('click', (e) => {
 	if (e.target.matches('.delete')) {
