@@ -53,18 +53,21 @@ body {
 					display: flex;
 					flex-direction: column;
 					background: rgb(0, 55, 77);
+					justify-content: center;
 					padding: 0.3rem 1rem;
 					margin-top: 0.5rem;
 					.number {
 						font-size: 2.25rem;
 						font-weight: bold;
 						color: #fff;
+						margin: 0 auto;
 					}
 					.days {
 						font-size: 0.75rem;
 						margin-left: 0.6rem;
 						color: #fff;
 						font-weight: bold;
+						margin: 0 auto;
 					}
 				}
 				.event {
