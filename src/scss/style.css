@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-body {
+* body {
   font-family: 'Roboto', sans-serif;
   background-color: #4158d0;
   background-image: -webkit-gradient(linear, left top, right top, from(#4158d0), color-stop(46%, #c850c0), to(#ffcc70));
@@ -13,12 +13,12 @@ body {
   height: 100%;
 }
 
-body #app {
-  margin: 2rem 0;
+* body #app {
+  margin: 2rem;
+  padding: 0;
 }
 
-body #app .container #form {
-  margin: 0 auto;
+* body #app .container #form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,85 +26,90 @@ body #app .container #form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 auto;
   padding: 1rem;
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #838383;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
 
-body #app .container #form input[type='text'] {
+* body #app .container #form input[type='text'] {
+  margin: 0.5rem 0 0;
   padding: 0.25rem;
+}
+
+* body #app .container #form input[type='date'] {
   margin: 0.5rem 0 0;
 }
 
-body #app .container #form input[type='date'] {
+* body #app .container #form .container-alert,
+* body #app .container #form .container-alert-date {
+  background: #ffb2b28a;
   margin: 0.5rem 0 0;
-}
-
-body #app .container #form .container-alert,
-body #app .container #form .container-alert-date {
-  background: rgba(255, 178, 178, 0.733);
-  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
   display: none;
 }
 
-body #app .container #form .container-alert .alert,
-body #app .container #form .container-alert .alert-date,
-body #app .container #form .container-alert-date .alert,
-body #app .container #form .container-alert-date .alert-date {
+* body #app .container #form .container-alert .alert,
+* body #app .container #form .container-alert .alert-date,
+* body #app .container #form .container-alert-date .alert,
+* body #app .container #form .container-alert-date .alert-date {
   color: #c00000;
   font-size: 0.75rem;
-  padding: 0.5rem 1rem;
 }
 
-body #app .container #form button {
+* body #app .container #form button {
   margin: 0.5rem 0 0;
+  padding: 0.5rem 5rem;
   background: #0d4997;
   border: none;
+  color: #ffffff;
+  font-size: 0.75rem;
   border-radius: 0.25rem;
-  color: #fff;
-  padding: 0.5rem 5rem;
   cursor: pointer;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
 }
 
-body .container-template {
+* body #app .container #form button:hover {
+  background: #02316e;
+}
+
+* body .container-template {
+  margin: 0.5rem 2rem 0.5rem;
   padding: 0.75rem;
+  background: #ffffff;
   border: 1px solid #838383;
-  background: white;
-  margin: 0.5rem auto 0.5rem;
-  max-width: 600px;
+  max-width: 700px;
 }
 
-body .container-template .container-events {
+* body .container-template .container-events {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1rem;
   border: 1px solid #838383;
 }
 
-body .container-template .container-events .container-days-events {
+* body .container-template .container-events .container-days-events {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-body .container-template .container-events .container-days-events .column {
+* body .container-template .container-events .container-days-events .column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,52 +117,56 @@ body .container-template .container-events .container-days-events .column {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #00374d;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0.5rem 0 0 0;
   padding: 0.3rem 1rem;
-  margin-top: 0.5rem;
+  background: #00374d;
 }
 
-body .container-template .container-events .container-days-events .column .number {
+* body .container-template .container-events .container-days-events .column .number {
+  color: #ffffff;
   font-size: 2.25rem;
   font-weight: bold;
-  color: #fff;
   margin: 0 auto;
 }
 
-body .container-template .container-events .container-days-events .column .days {
-  font-size: 0.75rem;
-  color: #fff;
-  font-weight: bold;
+* body .container-template .container-events .container-days-events .column .days {
   margin: 0 0.5rem;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: bold;
 }
 
-body .container-template .container-events .container-days-events .event {
+* body .container-template .container-events .container-days-events .event {
   margin: 0 0 0 2rem;
   font-size: 1rem;
   font-weight: bold;
 }
 
-body .container-template .container-events .container-date-delate {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+* body .container-template .container-events .container-date-delate {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: nul;
+          flex-direction: nul;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .container-template .container-events .container-date-delate .delete {
-  border: none;
+* body .container-template .container-events .container-date-delate .delete {
   background: #c00000;
-  border-radius: 0.5rem;
-  color: #fff;
+  border: none;
+  color: #ffffff;
   padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -166,18 +175,18 @@ body .container-template .container-events .container-date-delate .delete {
   cursor: pointer;
 }
 
-body .container-template .container-events .container-date-delate .delete:hover {
-  background: #e90000;
+* body .container-template .container-events .container-date-delate .delete:hover {
+  background: #ec0000;
 }
 
-body .container-template .container-events .container-date-delate .date {
+* body .container-template .container-events .container-date-delate .date {
   font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0 0 1rem;
+  padding: 0.5rem 1rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  padding: 0.5rem 1rem;
-  margin-right: 1rem;
-  font-weight: bold;
 }
 
 @media only screen and (min-width: 768px) {
@@ -192,46 +201,39 @@ body .container-template .container-events .container-date-delate .date {
   }
   body #app .container #form button {
     margin: 0.5rem 0 0;
-    background: #0d4997;
-    border: none;
-    border-radius: 0.25rem;
-    color: #fff;
     padding: 1rem 7rem;
-    -webkit-transition: background 0.5s;
-    transition: background 0.5s;
-    cursor: pointer;
+    font-size: 1rem;
   }
-  body #app .container #form button:hover {
-    background: #02316e;
+  body .container-template {
+    margin: 1rem auto;
   }
   body .container-template .container-events {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 1rem;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding: 1rem;
   }
   body .container-template .container-events .container-days-events .column .number {
     font-size: 2.75rem;
   }
   body .container-template .container-events .container-days-events .column .days {
-    font-size: 1rem;
-    margin-left: 0.65rem;
     color: #fff;
-    font-weight: bold;
+    font-size: 1rem;
   }
   body .container-template .container-events .container-days-events .event {
-    margin: 0 1.5rem 0 1.5rem;
     font-size: 1.25rem;
+    margin: 0 1.5rem 0 1.5rem;
   }
   body .container-template .container-events .container-date-delate .date {
     font-size: 1rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    font-weight: bold;
+    margin: 0 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
