@@ -92,6 +92,9 @@ body .container-template .container-events .container-days-events .column {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #00374d;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0.3rem 1rem;
   margin-top: 0.5rem;
 }
@@ -100,6 +103,7 @@ body .container-template .container-events .container-days-events .column .numbe
   font-size: 2.25rem;
   font-weight: bold;
   color: #fff;
+  margin: 0 auto;
 }
 
 body .container-template .container-events .container-days-events .column .days {
@@ -107,6 +111,7 @@ body .container-template .container-events .container-days-events .column .days 
   margin-left: 0.6rem;
   color: #fff;
   font-weight: bold;
+  margin: 0 auto;
 }
 
 body .container-template .container-events .container-days-events .event {

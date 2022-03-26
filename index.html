@@ -15,12 +15,14 @@
 		<div id="app">
 			<div class="container">
 				<form id="form">
-					<input type="text" name="event" placeholder="ingrese el evento..." />
+					<input type="text" name="eventText" placeholder="ingrese el evento..." />
 					<input type="date" name="date" placeholder="ingrese el evento..." />
 					<button type="submit">Añadir evento</button>
 				</form>
 			</div>
 		</div>
+
+		<div id="renderTemplate"></div>
 
 		<template id="templateEvents"
 			><div class="container-template">
@@ -39,5 +41,6 @@
 				</div>
 			</div></template
 		>
+		<script src="./src/js/app.js"></script>
 	</body>
 </html>
