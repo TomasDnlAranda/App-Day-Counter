@@ -1,3 +1,9 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	background-color: #4158d0;
@@ -21,6 +27,18 @@ body {
 				input[type='date'] {
 					margin: 0.5rem 0 0;
 				}
+				.container-alert,
+				.container-alert-date {
+					background: rgba(255, 178, 178, 0.733);
+					margin-top: 0.5rem;
+					display: none;
+					.alert,
+					.alert-date {
+						color: #c00000;
+						font-size: 0.75rem;
+						padding: 0.5rem 1rem;
+					}
+				}
 				button {
 					margin: 0.5rem 0 0;
 					background: rgb(13, 73, 151);
@@ -38,7 +56,7 @@ body {
 		border: 1px solid rgb(131, 131, 131);
 		background: white;
 		margin: 0.5rem auto 0.5rem;
-		max-width: max-content;
+		max-width: 600px;
 		.container-events {
 			display: flex;
 			align-items: center;
@@ -54,6 +72,7 @@ body {
 					flex-direction: column;
 					background: rgb(0, 55, 77);
 					justify-content: center;
+					align-items: center;
 					padding: 0.3rem 1rem;
 					margin-top: 0.5rem;
 					.number {
@@ -64,10 +83,9 @@ body {
 					}
 					.days {
 						font-size: 0.75rem;
-						margin-left: 0.6rem;
 						color: #fff;
 						font-weight: bold;
-						margin: 0 auto;
+						margin: 0 0.5rem;
 					}
 				}
 				.event {
@@ -81,7 +99,7 @@ body {
 				display: flex;
 				.delete {
 					border: none;
-					background: rgb(192, 0, 0);
+					background: #c00000;
 					border-radius: 0.5rem;
 					color: #fff;
 					padding: 0.25rem 0.75rem;
@@ -136,6 +154,7 @@ body {
 			.container-events {
 				flex-direction: row;
 				padding: 1rem;
+				justify-content: space-between;
 				.container-days-events {
 					.column {
 						.number {

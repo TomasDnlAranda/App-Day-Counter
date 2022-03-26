@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #4158d0;
@@ -36,6 +43,22 @@ body #app .container #form input[type='date'] {
   margin: 0.5rem 0 0;
 }
 
+body #app .container #form .container-alert,
+body #app .container #form .container-alert-date {
+  background: rgba(255, 178, 178, 0.733);
+  margin-top: 0.5rem;
+  display: none;
+}
+
+body #app .container #form .container-alert .alert,
+body #app .container #form .container-alert .alert-date,
+body #app .container #form .container-alert-date .alert,
+body #app .container #form .container-alert-date .alert-date {
+  color: #c00000;
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+}
+
 body #app .container #form button {
   margin: 0.5rem 0 0;
   background: #0d4997;
@@ -51,9 +74,7 @@ body .container-template {
   border: 1px solid #838383;
   background: white;
   margin: 0.5rem auto 0.5rem;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
+  max-width: 600px;
 }
 
 body .container-template .container-events {
@@ -95,6 +116,9 @@ body .container-template .container-events .container-days-events .column {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0.3rem 1rem;
   margin-top: 0.5rem;
 }
@@ -108,10 +132,9 @@ body .container-template .container-events .container-days-events .column .numbe
 
 body .container-template .container-events .container-days-events .column .days {
   font-size: 0.75rem;
-  margin-left: 0.6rem;
   color: #fff;
   font-weight: bold;
-  margin: 0 auto;
+  margin: 0 0.5rem;
 }
 
 body .container-template .container-events .container-days-events .event {
@@ -187,6 +210,9 @@ body .container-template .container-events .container-date-delate .date {
         -ms-flex-direction: row;
             flex-direction: row;
     padding: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   body .container-template .container-events .container-days-events .column .number {
     font-size: 2.75rem;

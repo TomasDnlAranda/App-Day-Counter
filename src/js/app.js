@@ -1,18 +1,25 @@
 const form = document.getElementById('form');
 const template = document.getElementById('templateEvents').content;
 const renderTemplate = document.getElementById('renderTemplate');
+const alertEvent = document.querySelector('.container-alert');
+const alertDate = document.querySelector('.container-alert-date');
 
 let events = [];
 
 form.addEventListener('submit', (e) => {
+	alertEvent.style.display = 'none';
+	alertDate.style.display = 'none';
+
 	e.preventDefault();
 
 	const data = new FormData(form);
 	const [eventText, date] = [...data.values()];
 
-	if (!eventText.trim() || !date.trim()) return;
+	if (!eventText.trim()) return alertValidation(alertEvent);
 
-	if (dateDiff(date) < 0) return;
+	if (!date.trim()) return alertValidation(alertDate);
+
+	if (dateDiff(date) < 0) return alertValidation(alertDate);
 
 	handleEvent(eventText, date);
 
@@ -36,10 +43,11 @@ const dateDiff = (date) => {
 	const today = new Date();
 	const difference = targetDate.getTime() - today.getTime();
 	const days = Math.ceil(difference / (1000 * 3600 * 24));
-	return days + 1;
+	return days;
 };
 
 const renderEvents = () => {
+	localStorage.setItem('events', JSON.stringify(events));
 	renderTemplate.textContent = '';
 	const fragment = document.createDocumentFragment();
 
@@ -52,8 +60,11 @@ const renderEvents = () => {
 		clone.querySelector('.delete').dataset.id = id;
 		fragment.appendChild(clone);
 	});
+
 	renderTemplate.appendChild(fragment);
 };
+
+const alertValidation = (alert) => (alert.style.display = 'block');
 
 document.addEventListener('click', (e) => {
 	if (e.target.matches('.delete')) {
@@ -64,5 +75,12 @@ document.addEventListener('click', (e) => {
 				renderEvents();
 			}
 		});
+	}
+});
+
+document.addEventListener('DOMContentLoaded', (e) => {
+	if (localStorage.getItem('events')) {
+		events = JSON.parse(localStorage.getItem('events'));
+		renderEvents();
 	}
 });
